@@ -1,0 +1,24 @@
+@use 'src/styles/abstract/mixins';
+@import 'src/styles/abstract/variables';
+
+.form {
+  padding: 0 2rem;
+  border-bottom: $border-primary;
+
+  &Button {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+
+    @include mixins.respond(md) {
+      flex-basis: 100%;
+    }
+  }
+
+  @include mixins.respond(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
