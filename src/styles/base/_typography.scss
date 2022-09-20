@@ -1,0 +1,16 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-text-dark-100;
+}
+
+input {
+  font-family: 'Lato', sans-serif, 'FontAwesome';
+}
+
+.heading-primary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: $color-primary-900;
+}

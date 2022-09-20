@@ -1,0 +1,20 @@
+@use 'src/styles/abstract/mixins';
+@import 'src/styles/abstract/variables';
+
+.button {
+  &,
+  &:focus,
+  &:visited {
+    padding: 1rem 2.5rem;
+    border: $border-button;
+    border-radius: $border-radius-medium;
+    background-color: $color-primary-600;
+    font-size: 3rem;
+    color: $color-text-brightest;
+  }
+}
+
+i {
+  display: inline-block;
+  margin-right: 2rem;
+}
