@@ -2,10 +2,14 @@
 @import 'src/styles/abstract/variables';
 
 .App {
-  max-width: 95%;
-  margin: 2rem auto 0;
+  max-width: 100%;
   background-color: $color-bg-brightest;
-  border-radius: $border-radius-big;
+
+  @include mixins.respond(md) {
+    margin: 2rem auto 0;
+    border-radius: $border-radius-big;
+    max-width: 95%;
+  }
 
   @include mixins.respond(xxl) {
     max-width: 1400px;

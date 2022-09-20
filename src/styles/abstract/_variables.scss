@@ -33,6 +33,10 @@ $color-bg-700: #495057;
 $color-bg-800: #343a40;
 $color-bg-900: #212529;
 
+$color-warning-primary: #dc3545;
+
+$color-succes-primary: #198754;
+
 $color-bg-brightest: #fff;
 
 $color-text-default: #000;
@@ -43,7 +47,8 @@ $color-text-dark-300: #464646;
 $color-text-brightest: #fff;
 
 $border-primary: 1px solid #f0f0f0;
-$border-input-focus: 2px solid $color-primary-700;
+$border-table: $border-primary;
+$border-input-focus: 2px solid $color-primary-600;
 $border-button: 2px solid $color-primary-600;
 
 $border-radius-small: 0.5rem;
@@ -51,3 +56,5 @@ $border-radius-medium: 0.8rem;
 $border-radius-big: 1.1rem;
 
 $transition-basic: all 0.3s ease;
+
+$box-shadow-primary: rgba(0, 0, 0, 0.09) 0px 2px 4px;
