@@ -2,42 +2,39 @@
 @import 'src/styles/abstract/variables';
 
 .wrapper {
+  flex-basis: 50%;
   padding: 2rem;
   display: flex;
-  justify-content: space-between;
-  column-gap: 3rem;
-
+  justify-content: flex-end;
+  flex-direction: column;
   @include mixins.respond(md) {
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 40%;
   }
 }
 
 .label {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
   align-self: center;
+  margin-bottom: 0.7rem;
   @include mixins.respond(md) {
-    margin-bottom: 0.7rem;
+    min-width: 20rem;
     align-self: flex-start;
   }
 }
 
 .select {
   flex-grow: 1;
-  max-width: 30rem;
+  margin: 0 auto;
+  width: 100%;
   height: 4.5rem;
   padding: 0.5rem;
   border: $border-primary;
   border-radius: $border-radius-medium;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
   text-align: center;
   cursor: pointer;
 
   @include mixins.respond(md) {
-    padding: 0.5rem;
-    max-width: 100%;
-    width: 100%;
   }
 }

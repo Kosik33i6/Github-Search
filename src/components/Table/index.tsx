@@ -15,11 +15,10 @@ export const Table = ({ data }: TableProps) => {
         <div className={heading}>Description</div>
         <div className={heading}>User</div>
       </div>
-      <div>
-        {data.data.items.map((item: JSONType) => (
-          <TableRow key={uuidv4()} data={item} />
-        ))}
-      </div>
+      {data.data.items.map((item: JSONType) => (
+        <TableRow key={uuidv4()} data={item} />
+      ))}
+      {/* <PaginatedItems/> */}
     </div>
   );
 };
