@@ -3,14 +3,14 @@
 
 .button {
   &,
-  &:focus,
-  &:visited {
-    padding: 1rem 2.5rem;
+  &:focus {
+    padding: 0.7rem 2rem;
     border: $border-button;
     border-radius: $border-radius-medium;
     background-color: $color-primary-600;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $color-text-brightest;
+    cursor: pointer;
   }
 }
 

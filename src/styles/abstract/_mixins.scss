@@ -29,3 +29,12 @@
 @mixin transition($property) {
   transition: $property 0.3s ease;
 }
+
+@mixin tableRow {
+  display: grid;
+  grid-template-columns: 30% 45% 25%;
+
+  @include respond(sm) {
+    grid-template-columns: 25% 50% 25%;
+  }
+}

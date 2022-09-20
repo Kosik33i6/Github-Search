@@ -1,0 +1,21 @@
+@use 'src/styles/abstract/mixins';
+@import 'src/styles/abstract/variables';
+
+.table {
+  width: 95%;
+  margin: 3rem auto;
+  border: $border-table;
+  border-radius: $border-radius-big;
+
+  &Header {
+    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: $color-bg-100;
+    @include mixins.tableRow;
+  }
+}
+
+.heading {
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+}

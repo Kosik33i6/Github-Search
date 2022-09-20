@@ -2,7 +2,7 @@ import { SelectMockProps } from '../components/Select/types';
 
 export const SelectMock: SelectMockProps = {
   id: 'fileType',
-  text: 'Choose the file type:',
+  text: 'Sort by:',
   options: [
     { value: 'js', text: 'JavaScript' },
     { value: 'ts', text: 'TypeScript' },

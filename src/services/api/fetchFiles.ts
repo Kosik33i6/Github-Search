@@ -6,9 +6,8 @@ const filterUrlPartial = process.env.REACT_APP_GITHUB_API_SEARCH_CODE_FILTER_URL
 const repoUrlPartial = process.env.REACT_APP_GITHUB_API_SEARCH_CODE_REPO_URL as string;
 
 export const fetchFilesData: FetchFilesType = async ({ phrase, user, repo, fileType }) => {
-  console.log(`${basicUrl}${phrase}${filterUrlPartial}${fileType}${repoUrlPartial}${user}/${repo}`);
-  const data = await axios.get(
-    `${basicUrl}${filterUrlPartial}${phrase}${fileType}${repoUrlPartial}${user}/${repo}`,
+  const result = await axios.get(
+    `${basicUrl}${phrase}${filterUrlPartial}${fileType}${repoUrlPartial}${user}/${repo}`,
   );
-  return data;
+  return result;
 };
