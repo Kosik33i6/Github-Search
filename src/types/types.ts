@@ -8,11 +8,17 @@ export type AppContextProviderType = {
   appData: JSONType | any;
 };
 
-export type FetchFilesType = (args: { phrase: string; user: string; repo: string; fileType: string }) => void;
+export type FetchFilesType = (args: {
+  phrase: string;
+  user: string;
+  fileType: string;
+  currentPage: number;
+  resultQuantity: string;
+}) => void;
 
 export type UrlStateType = {
   phrase: string;
   user: string;
-  repo: string;
   fileType: string;
+  resultQuantity: string;
 };

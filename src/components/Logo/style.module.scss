@@ -1,0 +1,17 @@
+@use 'src/styles/abstract/mixins';
+@import 'src/styles/abstract/variables';
+
+.wrapper {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  a {
+    display: flex;
+    text-decoration: none;
+    color: $color-text-dark-200;
+  }
+
+  i {
+    font-size: 4rem;
+  }
+}

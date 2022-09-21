@@ -1,6 +1,6 @@
 import { SelectMockProps } from '../components/Select/types';
 
-export const SelectMock: SelectMockProps = {
+export const SelectFilterMock: SelectMockProps = {
   id: 'fileType',
   text: 'Sort by:',
   options: [
@@ -10,5 +10,16 @@ export const SelectMock: SelectMockProps = {
     { value: 'java', text: 'Java' },
     { value: 'php', text: 'PHP' },
     { value: 'go', text: 'GO' },
+  ],
+};
+
+export const SelectNumberOfResultsMock: SelectMockProps = {
+  id: 'resultQuantity',
+  text: 'Number of results:',
+  options: [
+    { value: '10', text: '10' },
+    { value: '25', text: '25' },
+    { value: '50', text: '50' },
+    { value: '100', text: '100' },
   ],
 };

@@ -8,19 +8,27 @@ import styles from './style.module.scss';
 const { wrapper } = styles;
 
 export const Search = () => {
-  const { urlState, handleUrl } = useUrlState();
-  const { phrase, user, repo, fileType } = urlState;
+  const { urlState, currentPage, handleUrl, handlePage } = useUrlState();
+  const { phrase, user, fileType, resultQuantity } = urlState;
 
   const { data, status, isSuccess, isFetching, refetch }: UseQueryResult = useQuery(
     'filesData',
-    () => fetchFilesData({ phrase, user, repo, fileType }),
+    () => fetchFilesData({ phrase, user, fileType, currentPage, resultQuantity }),
     { enabled: false },
   );
 
   return (
     <section className={wrapper}>
       <SearchForm urlState={urlState} fetchData={refetch} handleUrl={handleUrl} />
-      <ResultPanel isFetching={isFetching} isSuccess={isSuccess} data={data} />
+      <ResultPanel
+        isFetching={isFetching}
+        isSuccess={isSuccess}
+        data={data}
+        currentPage={currentPage}
+        resultQuantity={resultQuantity}
+        fetchData={refetch}
+        handlePage={handlePage}
+      />
     </section>
   );
 };
