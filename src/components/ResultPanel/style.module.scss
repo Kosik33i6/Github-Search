@@ -1,10 +1,6 @@
 @use 'src/styles/abstract/mixins';
 @import 'src/styles/abstract/variables';
 
-.wrapper {
-  // background-image: linear-gradient(to right bottom, $color-primary-100, $color-bg-brightest);
-}
-
 .center {
   display: flex;
   justify-content: center;

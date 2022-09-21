@@ -6,7 +6,15 @@ import styles from './style.module.scss';
 
 const { wrapper, center } = styles;
 
-export const ResultPanel = ({ isFetching, isSuccess, data }: ResultPanelProps) => {
+export const ResultPanel = ({
+  isFetching,
+  isSuccess,
+  data,
+  currentPage,
+  resultQuantity,
+  fetchData,
+  handlePage,
+}: ResultPanelProps) => {
   if (isFetching) {
     return (
       <div className={wrapper}>
@@ -24,5 +32,17 @@ export const ResultPanel = ({ isFetching, isSuccess, data }: ResultPanelProps) =
       </div>
     );
   }
-  return <div className={wrapper}>{isSuccess ? <Table data={data} /> : null}</div>;
+  return (
+    <div className={wrapper}>
+      {isSuccess ? (
+        <Table
+          data={data}
+          currentPage={currentPage}
+          resultQuantity={resultQuantity}
+          fetchData={fetchData}
+          handlePage={handlePage}
+        />
+      ) : null}
+    </div>
+  );
 };

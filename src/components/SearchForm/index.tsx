@@ -10,7 +10,7 @@ const { form, formButton, formInputs, formFilters } = styles;
 
 export const SearchForm = ({ urlState, fetchData, handleUrl }: SearchFormProps) => {
   const { handleSubmit } = useFormSubmit(fetchData);
-  const { phrase, user, repo, fileType } = urlState;
+  const { phrase, user, fileType, resultQuantity } = urlState;
 
   return (
     <form className={form} action="/search" method="get" onSubmit={handleSubmit}>
@@ -31,17 +31,9 @@ export const SearchForm = ({ urlState, fetchData, handleUrl }: SearchFormProps) 
           text="User Name:"
           handleChange={handleUrl}
         />
-        <FormGroup
-          id="repo"
-          value={repo}
-          type="text"
-          iconClassName="fa-solid fa-folder-open"
-          text="Repository Name:"
-          handleChange={handleUrl}
-        />
       </div>
       <div className={formFilters}>
-        <Select {...SelectNumberOfResultsMock} value={fileType} handleChange={handleUrl} />
+        <Select {...SelectNumberOfResultsMock} value={resultQuantity} handleChange={handleUrl} />
         <Select {...SelectFilterMock} value={fileType} handleChange={handleUrl} />
       </div>
       <div className={formButton}>

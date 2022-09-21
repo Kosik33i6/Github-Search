@@ -14,12 +14,12 @@ export const SelectFilterMock: SelectMockProps = {
 };
 
 export const SelectNumberOfResultsMock: SelectMockProps = {
-  id: 'numberOfResults',
+  id: 'resultQuantity',
   text: 'Number of results:',
   options: [
     { value: '10', text: '10' },
-    { value: '25', text: '20' },
-    { value: '50', text: '25' },
+    { value: '25', text: '25' },
+    { value: '50', text: '50' },
     { value: '100', text: '100' },
   ],
 };
