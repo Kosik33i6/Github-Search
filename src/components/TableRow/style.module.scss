@@ -53,11 +53,11 @@
   &:focus,
   &:visited {
     margin-top: auto;
-    padding: 0.4rem 1rem;
+    padding: 0 1rem;
     border: $border-button;
     border-radius: $border-radius-small;
     font-size: 1.4rem;
-    line-height: 1.5rem;
+    line-height: 2.1rem;
     text-decoration: none;
     color: $color-text-dark-200;
     cursor: pointer;
