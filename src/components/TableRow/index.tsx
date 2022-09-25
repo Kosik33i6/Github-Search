@@ -1,10 +1,22 @@
 import { TableRowProps } from './types';
+import { ImageType } from '../../types/types';
+import { useModal } from '../../hooks/useModal';
+import { Modal } from '../Modal';
 
 import styles from './style.module.scss';
 
 const { row, rowCell, rowCellName, rowCellDescription, rowCellUser, rowCellImg, link, button, img } = styles;
 
 export const TableRow = ({ data }: TableRowProps) => {
+  const { isOpen, handleModal } = useModal();
+
+  const avatarUrl = data.repository.owner.avatar_url;
+  const user = data.repository.owner.login;
+  const imageData: ImageType = {
+    src: avatarUrl,
+    alt: `avatar-${user.toLowerCase()}`,
+  };
+
   return (
     <div className={row}>
       <div className={`${rowCell} ${rowCellName}`}>
@@ -18,11 +30,14 @@ export const TableRow = ({ data }: TableRowProps) => {
       </div>
       <div className={`${rowCell} ${rowCellUser}`}>
         <div className={rowCellImg}>
-          <img className={img} src={data.repository.owner.avatar_url} alt="avatar" />
+          <img className={img} src={imageData.src} alt={imageData.alt} />
         </div>
         <span>{data.repository.owner.login}</span>
-        <button className={button}>See more</button>
+        <button className={button} onClick={handleModal}>
+          See more
+        </button>
       </div>
+      <Modal image={imageData} isOpen={isOpen} handleModal={handleModal} user={user} />
     </div>
   );
 };

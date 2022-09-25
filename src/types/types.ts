@@ -1,8 +1,5 @@
-import { type } from 'os';
-
 export type JSONType = string | number | boolean | { [key: string]: JSONType } | Array<JSONType>;
 
-/* TODO: Add type for JSON file */
 export type AppContextProviderType = {
   isLoaded: boolean;
   appData: JSONType | any;
@@ -21,4 +18,14 @@ export type UrlStateType = {
   user: string;
   fileType: string;
   resultQuantity: string;
+};
+
+export type ImageType = {
+  src: string;
+  alt: string;
+};
+
+export type UseModalType = () => {
+  isOpen: boolean;
+  handleModal: () => void;
 };
