@@ -19,7 +19,7 @@ export const Search = () => {
 
   return (
     <section className={wrapper}>
-      <SearchForm urlState={urlState} fetchData={refetch} handleUrl={handleUrl} />
+      <SearchForm urlState={urlState} currentPage={currentPage} fetchData={refetch} handleUrl={handleUrl} />
       <ResultPanel
         isFetching={isFetching}
         isSuccess={isSuccess}
