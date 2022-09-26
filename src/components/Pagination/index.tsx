@@ -46,7 +46,7 @@ export const Pagination = ({
   return (
     <ul className={wrapper}>
       <li className={`${wrapperItem} ${currentPage === 1 ? disabled : ''}`} onClick={onPrevious}>
-        <i className="fa-solid fa-angle-left"></i>
+        <i className={`fa-solid fa-angle-left ${arrow} ${arrowLeft}`}></i>
       </li>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
@@ -72,7 +72,7 @@ export const Pagination = ({
         className={`${wrapperItem}  ${currentPage === lastPage ? disabled : ''}`}
         onClick={onNext}
       >
-        <i className="fa-solid fa-angle-right"></i>
+        <i className={`fa-solid fa-angle-right ${arrow} ${arrowRight}`}></i>
       </li>
     </ul>
   );
