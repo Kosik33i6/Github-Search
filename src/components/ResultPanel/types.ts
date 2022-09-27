@@ -6,6 +6,7 @@ export type ResultPanelProps = {
   data: unknown | UseQueryResult;
   currentPage: number;
   resultQuantity: string;
+  error: any;
   fetchData: () => void;
   handlePage: (page: number) => void;
 };

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './views';
-import { AppProviders } from './providers';
-import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { AppProviders } from './providers';
+import { App } from './views';
+import { ErrorPage } from './views';
+import reportWebVitals from './reportWebVitals';
 import './styles/main.scss';
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
         <App />
       </AppProviders>
     ),
+    errorElement: <ErrorPage />,
   },
 ]);
 
