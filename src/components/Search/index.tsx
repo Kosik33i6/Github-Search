@@ -11,7 +11,7 @@ export const Search = () => {
   const { urlState, currentPage, handleUrl, handlePage } = useUrlState();
   const { phrase, user, fileType, resultQuantity } = urlState;
 
-  const { data, status, isSuccess, isFetching, refetch }: UseQueryResult = useQuery(
+  const { data, isSuccess, isFetching, refetch, error }: UseQueryResult = useQuery(
     'filesData',
     () => fetchFilesData({ phrase, user, fileType, currentPage, resultQuantity }),
     { enabled: false },
@@ -19,7 +19,7 @@ export const Search = () => {
 
   return (
     <section className={wrapper}>
-      <SearchForm urlState={urlState} fetchData={refetch} handleUrl={handleUrl} />
+      <SearchForm urlState={urlState} currentPage={currentPage} fetchData={refetch} handleUrl={handleUrl} />
       <ResultPanel
         isFetching={isFetching}
         isSuccess={isSuccess}
@@ -28,6 +28,7 @@ export const Search = () => {
         resultQuantity={resultQuantity}
         fetchData={refetch}
         handlePage={handlePage}
+        error={error}
       />
     </section>
   );

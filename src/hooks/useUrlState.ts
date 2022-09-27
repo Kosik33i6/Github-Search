@@ -12,6 +12,7 @@ export const useUrlState = () => {
 
   const handleUrl = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const elementName = event.target.name;
+    console.log(elementName);
     setUrlState((value) => {
       const newValue = { ...value };
       newValue[elementName as keyof typeof urlState] = event.target.value.trim();

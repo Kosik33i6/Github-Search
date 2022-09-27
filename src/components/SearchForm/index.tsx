@@ -8,8 +8,8 @@ import styles from './style.module.scss';
 
 const { form, formButton, formInputs, formFilters } = styles;
 
-export const SearchForm = ({ urlState, fetchData, handleUrl }: SearchFormProps) => {
-  const { handleSubmit } = useFormSubmit(fetchData);
+export const SearchForm = ({ urlState, fetchData, currentPage, handleUrl }: SearchFormProps) => {
+  const { handleSubmit } = useFormSubmit(fetchData, urlState, currentPage);
   const { phrase, user, fileType, resultQuantity } = urlState;
 
   return (
